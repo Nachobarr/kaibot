@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAI - Kerry's AI Bot</title>
+</head>
+<body>
+  <h1 style="text-align: center;">Welcome to KAI - Kerry's AI Bot</h1>
+  <p style="text-align: center;">Interact with KAI using the chat interface below!</p>
+  
+  <!-- Watson Assistant Chat Widget -->
+  <script>
+    window.watsonAssistantChatOptions = {
+      integrationID: "2846267a-7939-4b2c-bbef-91e85c7c9066", // The ID of this integration.
+      region: "au-syd", // The region your integration is hosted in.
+      serviceInstanceID: "7b6c4f68-3445-46d2-8523-f4b3433176b1", // The ID of your service instance.
+      onLoad: async (instance) => { await instance.render(); }
+    };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+      document.head.appendChild(t);
+    });
+  </script>
+</body>
+</html>
